@@ -1,0 +1,601 @@
+html {
+    scroll-behavior: smooth;
+    }
+
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #043873;
+        padding: 20px;
+    }
+
+    .navbar .logo img {
+        width: 120px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* Auth Buttons */
+    .auth-buttons .btn, .auth-buttons .btn-primary {
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .auth-buttons .btn {
+        background-color: #FFE492;
+        color: black;
+    }
+
+    .auth-buttons .btn-primary {
+        background-color: #4F9CF9;
+    }
+
+    /* Hover effects */
+    .auth-buttons .btn:hover, .auth-buttons .btn-primary:hover {
+        background-color: #ffffff; /* Optional: change background color on hover */
+        color: #043873; /* Optional: change text color on hover */
+    }
+
+
+
+    /* Hero Section */
+    .hero {
+        background-color: #043873;
+        color: white;
+        padding: 100px 0;
+    }
+
+    .hero-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .hero-text {
+        flex: 1;
+        padding-right: 50px;
+        text-align: left;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .btn-primary {
+        background-color: #4F9CF9;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text, .hero-image {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+        }
+    }
+
+    /* Features Section */
+    .features-content {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        margin: 50px auto; /* Add margin for spacing */
+        flex-wrap: wrap;
+        flex-direction: row-reverse; /* Text on right side by default */
+    }
+
+    .features-text {
+        flex: 1;
+        padding-left: 10px; /* Adjust padding to space text from the image */
+        text-align: left;
+        margin-bottom: 30px; /* Add margin at the bottom */
+    }
+
+    .features-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .features-image img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .features-text h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .features-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .features-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .features-text, .features-image {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .features-image img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .features-text h2 {
+            font-size: 36px;
+        }
+
+        .features-text p {
+            font-size: 18px;
+        }
+    }
+
+    /* Work Together Section */
+    .worktogether-content {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        margin: 50px auto; /* Add margin for spacing */
+        flex-wrap: wrap;
+        flex-direction: row; /* Ensure text is on the left side and image on the right by default */
+    }
+
+    .worktogether-text {
+        flex: 1;
+        padding-right: 10px; /* Increased padding to create more space between text and image */
+        text-align: left;
+        margin-bottom: 30px; /* Add margin at the bottom */
+    }
+
+    .worktogether-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin-left: 20px; /* Added margin to the left for additional spacing */
+    }
+
+    .worktogether-image img {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .worktogether-text h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .worktogether-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .worktogether-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .worktogether-text, .worktogether-image {
+            max-width: 100%;
+            padding: 0;
+            margin-left: 0; /* Remove margin-left on smaller screens */
+        }
+
+        .worktogether-image {
+            margin-left: 0; /* Ensure margin is removed on smaller screens */
+        }
+
+        .worktogether-image img {
+            width: 90%;
+            max-width: 100%;
+        }
+
+        .worktogether-text h2 {
+            font-size: 36px;
+        }
+
+        .worktogether-text p {
+            font-size: 18px;
+        }
+    }
+
+    /* Use Us Extencion */
+    .extension {
+        background-color: #043873;
+    }
+    .extension-content {
+        display: flex;
+        background-color: #043873;
+        align-items: center;
+        max-width: 1200px;
+        margin: 50px auto; /* Add margin for spacing */
+        flex-wrap: wrap;
+        flex-direction: row-reverse; /* Text on right side by default */
+    }
+
+    .extension-text {
+        flex: 1;
+        color: #ffffff;
+        padding-left: 10px; /* Adjust padding to space text from the image */
+        text-align: left;
+        margin-bottom: 30px; /* Add margin at the bottom */
+    }
+
+    .extension-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .extension-image img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .extension-text h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .extension-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .extension-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .extension-text, .extension-image {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .extension-image img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .extension-text h2 {
+            font-size: 36px;
+        }
+
+        .extension-text p {
+            font-size: 18px;
+        }
+    }
+
+    /* Customize */
+    .customize-content {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        margin: 50px auto; /* Add margin for spacing */
+        flex-wrap: wrap;
+        flex-direction: row; /* Ensure text is on the left side and image on the right by default */
+    }
+
+    .customize-text {
+        flex: 1;
+        padding-right: 10px; /* Increased padding to create more space between text and image */
+        text-align: left;
+        margin-bottom: 30px; /* Add margin at the bottom */
+    }
+
+    .customize-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin-left: 20px; /* Added margin to the left for additional spacing */
+    }
+
+    .customize-image img {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .customize-text h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .customize-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .customize-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .customize-text, .customize-image {
+            max-width: 100%;
+            padding: 0;
+            margin-left: 0; /* Remove margin-left on smaller screens */
+        }
+
+        .customize-image {
+            margin-left: 0; /* Ensure margin is removed on smaller screens */
+        }
+
+        .customize-image img {
+            width: 90%;
+            max-width: 100%;
+        }
+
+        .customize-text h2 {
+            font-size: 36px;
+        }
+
+        .customize-text p {
+            font-size: 18px;
+        }
+    }
+
+    /* Plans Section */
+    .plans {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+        flex-wrap: wrap;
+    }
+
+    .plans .plan {
+        background-color: #f0f0f0;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+        .plans .plan {
+            width: 90%;
+        }
+    }
+
+    /* Center the heading "Choose Your Plan" */
+    .pricing-text {
+        text-align: center; /* Center the text */
+        margin: 0 auto 40px; /* Center horizontally and add space below */
+        font-size: 36px; /* Adjust font size if needed */
+        font-weight: bold; /* Optional: Make the font bold */
+        color: black; /* Optional: Adjust color to match design */
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    /* Pricing Plan Styles */
+    .plans {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+        flex-wrap: wrap;
+    }
+
+    .plans .plan {
+        background-color: #f0f0f0;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        border-radius: 8px;
+        margin: 10px 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transitions */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow for better visual separation */
+        position: relative; /* Ensure that children elements are positioned relative to this container */
+    }
+
+    .plans .plan:hover {
+        background-color: #043873;
+        color: #ffffff;
+        transform: scale(1.05); /* Scale up the plan on hover */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Increase shadow for better focus effect */
+    }
+
+    /* Change the color of the .dollar class when hovering over the .plan container */
+    .plans .plan:hover .dollar {
+        color: #FFE492; /* Change this to the color you want on hover */
+    }
+
+    .plans .plan .dollar {
+        display: block; /* Ensure it’s displayed */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    .plans .plan h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .plans .plan p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .plans .plan ul {
+        list-style: none;
+        padding: 0;
+        text-align: left; /* Align list items to the left */
+        margin: 20px auto; /* Center the list and add spacing */
+    }
+
+    .plans .plan ul p {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; /* Space between list items */
+    }
+
+    .plans .plan ul p i {
+        margin-right: 10px; /* Add space between the icon and text */
+        color: #4F9CF9; /* Optional: Add color to the icon for better visibility */
+    }
+
+    .plans .plan .btn-primary {
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Button */
+    /* Pricing Section Button Styles */
+    .plans .plan .btn-primary {
+        background-color: #ffffff; /* Default background color */
+        color: #4F9CF9; /* Text color */
+        border: 2px solid #4F9CF9; /* Border color */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
+
+    .plans .plan .btn-primary:hover {
+        background-color: #4F9CF9; /* Background color on hover */
+        color: #ffffff; /* Text color on hover */
+    }
+
+    /* General Button Styling for Specific Sections */
+    .hero .btn-primary,
+    .features .btn-primary,
+    .worktogether .btn-primary,
+    .extension .btn-primary,
+    .customize .btn-primary,
+    .auth-buttons .btn,
+    .auth-buttons .btn-primary {
+        background-color: #4F9CF9; /* Default background color */
+        color: white; /* Text color */
+        border: 2px solid #4F9CF9; /* Border color */
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color, text color, and size */
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    /* Hover effects for buttons */
+    .hero .btn-primary:hover,
+    .features .btn-primary:hover,
+    .worktogether .btn-primary:hover,
+    .extension .btn-primary:hover,
+    .customize .btn-primary:hover,
+    .auth-buttons .btn:hover,
+    .auth-buttons .btn-primary:hover {
+        background-color: #ffffff; /* Background color on hover */
+        color: #043873; /* Text color on hover */
+        transform: scale(1.1); /* Increase size on hover */
+    }
+
+
+    /* Other existing CSS rules */
+    /* (Include the rest of your existing CSS code here) */
+
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .plans .plan {
+            width: 90%;
+        }
+    }
+
+
+
+    /* Footer */
+    footer {
+        background-color: #043873;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .container-footer {
+        background-color: #043873;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        /* margin-top: 40px; */
+        position: absolute;
+    bottom: 0;
+    }
